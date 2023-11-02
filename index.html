@@ -186,7 +186,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2023-11-02 15:19:57 / Modified: 15:29:41" itemprop="dateCreated datePublished" datetime="2023-11-02T15:19:57+08:00">2023-11-02</time>
+              <time title="Created: 2023-11-02 15:19:57 / Modified: 15:32:56" itemprop="dateCreated datePublished" datetime="2023-11-02T15:19:57+08:00">2023-11-02</time>
             </span>
 
           
@@ -222,13 +222,13 @@
 
       
           <h1 id="R"><a href="#R" class="headerlink" title="R"></a>R</h1><h2 id="安装R包-参数"><a href="#安装R包-参数" class="headerlink" title="安装R包-参数"></a>安装R包-参数</h2><p>当使用install.packages()安装R包时，repos参数指定了R应该从哪些仓库位置去查找和下载包。</p>
-<p>默认情况下,repos会指向一些默认的CRAN镜像站点。但是有些包不在CRAN上，比如cmdstanr，它存放在一个自定义的仓库”<a target="_blank" rel="noopener" href="https://mc-stan.org/r-packages/%22%E3%80%82">https://mc-stan.org/r-packages/&#34;。</a></p>
+<p>默认情况下，repos会指向一些默认的CRAN镜像站点。但是有些包不在CRAN上，比如cmdstanr，它存放在一个自定义的仓库”<a target="_blank" rel="noopener" href="https://mc-stan.org/r-packages/%22%E3%80%82">https://mc-stan.org/r-packages/&#34;。</a></p>
 <p>为了能安装这样的非CRAN包，需要将自定义仓库地址添加到repos参数中,比如:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">install.packages(&quot;cmdstanr&quot;,</span><br><span class="line">                 repos = c(&quot;https://mc-stan.org/r-packages/&quot;, getOption(&quot;repos&quot;)))</span><br></pre></td></tr></table></figure>
 
 <p>这个repos设置了两个仓库:</p>
 <ol>
-<li>“<a target="_blank" rel="noopener" href="https://mc-stan.org/r-packages/%22:cmdstanr%E5%8C%85%E7%9A%84%E4%BB%93%E5%BA%93">https://mc-stan.org/r-packages/&#34;:cmdstanr包的仓库</a></li>
+<li>“<a target="_blank" rel="noopener" href="https://mc-stan.org/r-packages/%22:cmdstanr%E5%8C%85%E7%9A%84%E4%BB%93%E5%BA%93">https://mc-stan.org/r-packages/&#34;</a>:cmdstanr包的仓库</li>
 <li>getOption(“repos”)：默认的CRAN镜像站点</li>
 </ol>
 <p>这样R就会先在cmdstanr的仓库地址查找该包，如果不存在再去CRAN镜像里查找依赖包。</p>
